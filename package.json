@@ -1,0 +1,16 @@
+{
+  "name": "node-ws-canary",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/einaros/ws.git"
+  },
+  "dependencies": {
+    "ws": "0.4.x",
+    "express": "3.x"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  }
+}

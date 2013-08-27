@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Tahoma, Geneva, sans-serif;
+      }
+
+      div {
+        display: inline;
+      }
+    </style>
+    <script>
+      function updateStats(ping) {
+        document.getElementById('ping').innerHTML = ping;
+      }
+
+      var host = window.document.location.host.replace(/:.*/, '');
+      var ws = new WebSocket('ws://' + host);
+      ws.onmessage = function (event) {
+        updateStats(event.data);
+      };
+    </script>
+  </head>
+  <body>
+    <strong>Stats</strong><br>
+    Last ping: <div id='ping'></div><br>
+  </body>
+</html>
