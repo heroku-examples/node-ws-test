@@ -13,7 +13,7 @@ $ PORT=8080 foreman start
 
 ``` bash
 $ heroku create
-$ heroku sudo labs:enable websockets
+$ heroku labs:enable websockets
 $ git push heroku master
 $ heroku open
 ```
