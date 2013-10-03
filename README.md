@@ -1,19 +1,19 @@
 # Node.js Websocket Test
 
-Uses the [ws library](http://einaros.github.io/ws/).
+A tiny demo using the [einaros/ws](http://einaros.github.io/ws/) WebSockets implementation.
 
-# Running
+# Running Locally
 
 ``` bash
-$ npm install
-$ PORT=8080 foreman start
+npm install
+foreman start
 ```
 
 # Running on Heroku
 
 ``` bash
-$ heroku create
-$ heroku labs:enable websockets
-$ git push heroku master
-$ heroku open
+heroku create
+heroku labs:enable websockets
+git push heroku master
+heroku open
 ```
