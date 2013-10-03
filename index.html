@@ -1,29 +1,34 @@
-<!DOCTYPE html>
 <html>
   <head>
     <style>
       body {
-        font-family: Tahoma, Geneva, sans-serif;
+        font-family: "Helvetica Neue", helvetica, arial;
+        padding: 15px;
       }
 
-      div {
-        display: inline;
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      ul li {
+        line-height: 1.4;
       }
     </style>
-    <script>
-      function updateStats(ping) {
-        document.getElementById('ping').innerHTML = ping;
-      }
 
-      var host = window.document.location.host.replace(/:.*/, '');
-      var ws = new WebSocket('ws://' + host);
+    <script>
+      var host = location.origin.replace(/^http/, 'ws')
+      var ws = new WebSocket(host);
       ws.onmessage = function (event) {
-        updateStats(event.data);
+        var li = document.createElement('li');
+        li.innerHTML = JSON.parse(event.data);
+        document.querySelector('#pings').appendChild(li);
       };
     </script>
   </head>
   <body>
-    <strong>Stats</strong><br>
-    Last ping: <div id='ping'></div><br>
+    <h1>Pings</h1>
+    <ul id='pings'></ul>
   </body>
 </html>
