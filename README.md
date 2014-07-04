@@ -6,7 +6,7 @@ A tiny demo using the [einaros/ws](http://einaros.github.io/ws/) WebSockets impl
 
 ``` bash
 npm install
-foreman start
+npm start
 ```
 
 # Running on Heroku
