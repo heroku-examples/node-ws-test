@@ -13,7 +13,6 @@ npm start
 
 ``` bash
 heroku create
-heroku labs:enable websockets
 git push heroku master
 heroku open
 ```
