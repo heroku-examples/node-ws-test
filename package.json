@@ -1,9 +1,9 @@
 {
-  "name": "node-ws-canary",
+  "name": "node-ws-test",
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "git://github.com/einaros/ws.git"
+    "url": "https://github.com/heroku-examples/node-ws-test.git"
   },
   "dependencies": {
     "ws": "0.4.x",
